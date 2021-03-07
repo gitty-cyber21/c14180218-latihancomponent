@@ -1,9 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Judul :
+<h1>Notes</h1>
+<form>
+  Judul : <br>
  <input type ="text" [(ngModel)] = "textjudul"/><br>
- Isi :
- <input type ="text" [(ngModel)] = "textjudul"/><br>
- Tanggal :
- <input type ="text" [(ngModel)] = "textjudul"/><br>
-</p>
+ Isi : <br>
+ <textarea [(ngModel)]= "textisi"> </textarea><br>
+ Tanggal : <br>
+ <input type ="date" [(ngModel)] = "tanggal"/><br>
+</form>
