@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -11,4 +12,13 @@ export class AppComponent  {
   textjudul = "";
   textisi = "";
   tanggal = "";
+
+  constructor(
+    private router : Router
+  ){}
+
+  DONE(){
+      this.router.navigate(["/page2"]);
+
+  }
 }
