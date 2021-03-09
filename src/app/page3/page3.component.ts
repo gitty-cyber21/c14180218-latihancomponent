@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GlobalvarService } from '../globalvar.service';
 
 @Component({
   selector: 'app-page3',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page3Component implements OnInit {
 
-  constructor() { }
+    constructor( private router : Router, public globalvar : GlobalvarService) { }
 
   ngOnInit() {
   }
 
+  
 }
