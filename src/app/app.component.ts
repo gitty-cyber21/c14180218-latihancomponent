@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalvarService } from './globalvar.service';
 
 @Component({
   selector: 'my-app',
@@ -14,11 +15,28 @@ export class AppComponent  {
   tanggal = "";
 
   constructor(
-    private router : Router
+    private router : Router, public globalvar : GlobalvarService
   ){}
 
   DONE(){
-      this.router.navigate(["/page2"]);
+    var inp = [];
+    inp[0] = this.textjudul.toString();
+    console.log(this.textjudul.toString);
+    inp[1] = this.textisi.toString();
+    console.log(inp[1]);
+    inp[2] = this.tanggal.toString();
+    console.log(inp[2]);
 
+    this.globalvar.arr.push(inp);
   }
+
+  PAGE2(){
+    this.router.navigate(["/page2"]);
+  }
+
+  PAGE3(){
+    this.router.navigate(["/page3"]);
+  }
+
+  
 }
