@@ -16,11 +16,24 @@ export class Page2Component implements OnInit {
    
 
   FAV(j){
-    this.globalvar.favarr.push(this.globalvar.arr[j]);
+
+    for(var i = 0; i < this.globalvar.arr.length; i++){
+        for(var x = 0; x < this.globalvar.favarr.length; x++){
+          if(this.globalvar.arr[i] == this.globalvar.favarr[x]){
+            alert("Sudah ditambahkan");
+          }
+          else{
+               this.globalvar.favarr.push(this.globalvar.arr[j]);
+          }
+        }
+    }
+   
   }
 
   FAV2(){
-
+      for(var x = 0; x < this.globalvar.arr.length; x++){
+          alert(this.globalvar.arr[x]);
+        }
   }
 
   BACK(){
